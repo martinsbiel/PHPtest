@@ -16,7 +16,7 @@
                             <h2>CEP</h2>
                         </div>
                         <div class="card-body">
-                            <p>Digite o CEP, apenas números:</p>
+                            <p>Digite o CEP (apenas números) para buscar um endereço:</p>
                             <form action="" method="post">
                                 <div class="input-group mb-3">
                                     <input type="text" name="cep" class="form-control" maxlength="8" placeholder="CEP" aria-label="CEP" aria-describedby="cep" value="<?= $_POST['cep'] ?? null ?>">
