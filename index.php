@@ -32,7 +32,9 @@
                                     $cep = new CEP();
                                     $cep->setCEP($cepNumber);
 
-                                    if($cep->checkAPIError()){
+                                    if(empty($cepNumber)){
+                                        echo '<div class="alert alert-danger" role="alert">O campo CEP precisa ser preenchido.</div>';
+                                    } else if($cep->checkAPIError()){
                                         echo '<div class="alert alert-danger" role="alert">O CEP solicitado não existe.</div>';
                                     } else if($cep->checkCEP($cepNumber)){
                                         // cep already in database
